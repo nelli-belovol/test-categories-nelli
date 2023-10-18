@@ -1,0 +1,80 @@
+@import '../../scss/variables.scss';
+
+.lineWrapper {
+  position: relative;
+}
+.line {
+  height: 2px;
+  background-color: grey;
+  position: absolute;
+  top: 28px;
+}
+
+.categoryBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .categories {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 140px;
+    margin-top: 30px;
+  }
+
+  .inputWrapper {
+    width: fit-content;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    outline-color: $grey;
+    font-size: 16px;
+    line-height: 22px;
+    position: relative;
+
+    & > input {
+      padding: 7px 15px;
+    }
+
+    &::before {
+      content: '';
+      width: 2px;
+      height: 30px;
+      background-color: $grey;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: '';
+      width: 2px;
+      height: 30px;
+      background-color: grey;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .actions {
+      width: 100%;
+      display: inline-flex;
+      gap: 10px;
+      position: absolute;
+      top: 50%;
+      right: -220px;
+      transform: translate(0%, -50%);
+    }
+  }
+  .noCategories::after {
+    display: none;
+  }
+  .inputWrapper::placeholder {
+    color: $grey;
+  }
+}

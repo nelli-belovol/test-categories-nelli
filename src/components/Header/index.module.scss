@@ -1,0 +1,125 @@
+@import '../../scss/variables.scss';
+
+.header {
+  border-bottom: 2px solid #8080804f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+
+  & > span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: $orange;
+  }
+}
+
+.actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .listView {
+    cursor: pointer;
+    background-color: rgb(64, 176, 190);
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+  }
+
+  .locationWrap {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+
+    & > svg {
+      fill: $grey;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .scaleWrap {
+    gap: 3px;
+
+    .scaleBlock {
+      background-color: white;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+
+      & > svg {
+        fill: $grey;
+        width: 12px;
+        height: 12px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: rgb(233, 230, 230);
+      }
+    }
+
+    .scaleChooseWrapper {
+      height: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      position: relative;
+      cursor: pointer;
+
+      .scalesList {
+        z-index: 20;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 55px;
+        left: -20px;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+
+        & > li {
+          height: 100%;
+          width: 100%;
+          padding: 0 10px;
+          cursor: pointer;
+
+          &:hover,
+          &:focus {
+            background-color: rgb(233, 230, 230);
+          }
+        }
+      }
+    }
+  }
+}

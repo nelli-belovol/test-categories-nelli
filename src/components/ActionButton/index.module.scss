@@ -1,0 +1,31 @@
+@import '../../scss/variables.scss';
+
+.actionButton {
+  display: block;
+  border-radius: 50%;
+  border: none;
+  padding: 4px;
+  display: flex;
+  cursor: pointer;
+
+  & > svg {
+    fill: white;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.red {
+  background-color: $warningColor;
+}
+
+.grey {
+  background-color: $grey;
+}
+
+.orange {
+  background-color: $orange;
+}
+.green {
+  background-color: green;
+}
